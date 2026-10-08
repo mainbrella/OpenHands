@@ -1,0 +1,19 @@
+[project]
+name = "openhands-mainbrella-prototype"
+version = "0.0.1"
+requires-python = ">=3.12"
+dependencies = ["openhands-sdk==1.53.0", "mainbrella==0.1.0"]
+
+[dependency-groups]
+dev = ["pytest==9.1.1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["test_workspace.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Configure SDK output before importing it so bearer URLs never reach logs.
+"verify.py" = ["E402"]
