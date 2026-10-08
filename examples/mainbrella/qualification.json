@@ -1,0 +1,28 @@
+{
+  "api_origin": "http://localhost:8787",
+  "checks": [
+    "authenticated_server_info",
+    "stdout_stderr_exit_code",
+    "timeout_partial_output",
+    "one_mib_binary_roundtrip",
+    "generation_qualified_reconnect",
+    "conversation_create_and_websocket_event",
+    "two_workspace_filesystem_isolation"
+  ],
+  "gaps": [
+    "SDK execute_command timeout omits final buffered output"
+  ],
+  "cleanup": "completed",
+  "timeout_result": {
+    "exit_code": -1,
+    "timeout_occurred": true,
+    "partial_output_received": false
+  },
+  "ok": true,
+  "verified_at": "2026-10-08T10:33:04.078321+00:00",
+  "sdk_version": "1.53.0",
+  "mainbrella_sdk_version": "0.1.0",
+  "unit_tests_passed": 7,
+  "model_requests": 0,
+  "scope": "Local Mainbrella service, published SDK transport; Canvas UI and production not exercised"
+}
